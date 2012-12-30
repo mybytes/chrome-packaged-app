@@ -1,11 +1,5 @@
 /* app css stylesheet */
 
-/* RJC:  IE always shows vertical scrollbar, plus nav looks wierd when switching */
-html {
-    overflow-y: scroll;
-}
-
-
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;

@@ -1,9 +1,9 @@
 'use strict';
 
-/* Controllers */
+myApp.controller('EmployeesCtrl', ['$scope', function($scope) {}]);
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+myApp.controller('HomeCtrl', ['$scope', function($scope) {}]);
 
-function MyCtrl2() {}
-MyCtrl2.$inject = [];
+myApp.controller('AboutCtrl', ['$scope', function($scope) {}]);
+
+myApp.controller('ContactCtrl', ['$scope', function($scope) {}]);

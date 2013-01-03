@@ -4,8 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-     
-        
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         
@@ -13,7 +12,7 @@
                 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-      
+
         <style>
             body {
                 padding-top: 60px;
@@ -23,7 +22,13 @@
         
         <!--  Twitter Bootstrap -->
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-       
+
+        <link rel="stylesheet" type="text/css"
+              href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+        <link rel="stylesheet" type="text/css"
+              href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />
+
        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
        
        <link rel="stylesheet" href="css/app.css"/>
@@ -33,12 +38,14 @@
     </head>
     
     <body ng-app="myApp">
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
+        <!-- add navbar-inverse class for black/google-like bar -->
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -58,9 +65,9 @@
                             <li><a href="#/contact">Contact</a></li>
                             
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#/employees">Employees</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
                                     <li class="divider"></li>
@@ -80,8 +87,11 @@
             </div>
         </div>
 
-     
 
+
+<!--
+        <div>f00={{foo}}</div>
+-->
             
             <!-- 
   ngView is a directive that complements the $route service by including 
@@ -92,6 +102,7 @@
   
   <div ng-view></div>
 
+
             <hr>
 
             <footer>
@@ -100,19 +111,29 @@
 
    
 
-   <!-- TODO compile these ie via yeoman -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"><\/script>')</script>
 
+        <script src="lib/angular/angular.js"></script>
+
+        <script type="text/javascript" src="http://angular-ui.github.com/angular-ui/build/angular-ui.js"></script>
+        <script src="http://angular-ui.github.com/ng-grid/lib/ng-grid.debug.js"></script>
+
+        <!-- TODO compile these ie via yeoman -->
+
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+
+
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
-    
+
+
+
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

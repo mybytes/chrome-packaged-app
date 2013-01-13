@@ -46,7 +46,7 @@ myApp.run(function ($rootScope, $http, AuthService) {
     /** TODO this is a pseudo login... see my troubles with using service in Services.AuthService **/
 
     // text input for login/password (only)
-    $rootScope.loginInput = 'login';
+    $rootScope.loginInput = 'enterprise@github.com';
     $rootScope.passwordInput = 'password';
 
     $rootScope.currentUser = '';
@@ -68,10 +68,14 @@ myApp.run(function ($rootScope, $http, AuthService) {
 
     // setup globals (can easily export to json later for externalization of strings)
     $rootScope.constants = {
+        "navbar_title": "Angular-Enterprise-Seed",
         "company_name": "Angular-Enterprise-Seed",
         "copyright_year": "2013",
-        "hero_button": "Start here",
         "hero_title": "Fancy landing page!",
+        "hero_button": "Start here",
+        "landing_section_1": "Cool Thing A",
+        "landing_section_2": "Cool Thing B",
+        "landing_section_3": "Cool Thing C",
         "lorem_ipsum_short": "Donec id elit non mi porta gravida at eget metus...",
         "lorem_ipsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis orci, auctor a dignissim vitae, lobortis vitae lorem. Donec nec tempor leo. Etiam ultricies, elit vel mollis iaculis, orci odio placerat orci, vel malesuada dolor neque nec mi. Donec felis urna, vestibulum eu blandit vitae, eleifend in leo. Nunc tempus condimentum aliquet. Vivamus quis lectus nunc, non adipiscing libero. Praesent et erat sit amet sem suscipit rhoncus. Integer magna libero, dictum nec semper sed, vulputate in dolor. Suspendisse mattis, mauris sit amet commodo porttitor, quam ligula molestie tortor, rhoncus cursus diam magna in libero. Aliquam non sapien ut velit adipiscing viverra ac vel felis."
     };

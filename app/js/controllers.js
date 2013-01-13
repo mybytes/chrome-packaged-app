@@ -116,8 +116,6 @@ myApp.controller('ConfigureCtrl', ['$scope', '$routeParams', function($scope, $r
     $scope.reset();
 
 }]);
-
-
 var playground = myApp.controller('PlaygroundCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
     // add service name to the scope...
     $scope.widgetName = $routeParams.widgetName;

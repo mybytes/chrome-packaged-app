@@ -1,7 +1,7 @@
 'use strict';
 
 // declare top-level module which depends on filters,and services
-var myApp = angular.module('myApp', ['myApp.filters', 'myApp.directives', 'ngGrid', 'ui.bootstrap']);
+var myApp = angular.module('myApp', ['myApp.filters', 'myApp.directives', 'ngGrid', 'ui', 'ui.bootstrap']);
 
 // bootstrap (pre instance)
 myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {

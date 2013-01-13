@@ -24,6 +24,4 @@ Some focus on responsiveness.
 
 Tests - Enhance tests, consider inclusion of yeoman.
 
-Additional/better directive examples.
-
-Would love to get some input by experienced angular developers.  How can this be done better?
+Additional/better service and filter examples.

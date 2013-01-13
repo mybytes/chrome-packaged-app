@@ -1,6 +1,6 @@
 # Angular Enterprise Seed
 
-This project integrates angular-seed with angular-ui, angular-ui/bootstrap, angular-strap, jQuery, Twitter Bootstrap, and Font Awesome to create a more readily off-the-shelf starting point for building large applications. 
+This project takes angular-seed and adds Twitter Bootstrap, angular-ui, angular-ui/bootstrap, and few less conventional (but currently best-known) implementations.  It is meant to be a more substantial seed, incorporating up to date angular solutions and examples, particular around ui.  
 
 Includes examples for a paginated grid with sort and filter support, accordion, tree, pagination, routes, bootstrap navbar, etc.
 

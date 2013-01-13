@@ -56,10 +56,12 @@
                     <div ng-show="!isLoggedIn()">
                         <input class="span2" ng-model="loginInput" type="text" placeholder="Email">
                         <input ng-model="passwordInput" class="span2" type="password" placeholder="Password">
-                        <button type="submit" class="btn" ng-click="login()">Sign in</button>
+                        <a class="btn btn-primary" ng-click="login()">
+                            <i class="icon-circle icon-large"></i> Sign in</a>
                     </div>
                     <div style="color: #999;" ng-show="isLoggedIn()"><span>Logged in as {{currentUser}}</span>
-                        <button type="submit" class="btn" ng-click="logout()">Sign out</button>
+                        <a class="btn btn-inverse" ng-click="logout()">
+                            <i class="icon-circle-blank icon-large"></i> Sign out</a>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,12 @@
 # Angular Enterprise Seed
 
-An enterprise starting point, this project takes angular-seed and adds Twitter Bootstrap, angular-ui, angular-ui/bootstrap, and few less conventional (but currently best-known) implementations.
+This project takes angular-seed and adds Twitter Bootstrap, angular-ui, angular-ui/bootstrap, and few less conventional (but currently best-known) implementations.  It is meant to be a more substantial seed, incorporating up to date angular solutions and examples, particular around ui.  
+
+Includes examples for a paginated grid with sort and filter support, accordian, tree, pagination, routes, navbar, etc.
 
 # Goals
 
-An enterprise seed.  The dev playgound contains common, ready-made implementations off various widgets, largely borrowed from the aforementioned popular projects and jstwiddle angels.
+This is meant to serve as a more concrete starting point for a substantial enterprise type of application compared to angular-seed.  The dev playgound (available on navbar) contains common, ready-made implementations off various widgets, largely borrowed from the aforementioned popular projects and jstwiddles.
 
 Server agnostic (aka static).  No server requirement lowers the barrier to entry and allows the project to focus strictly on the client side.  A simple "python -m SimpleHTTPServer" from the directory containing this poject is enough to run the project.  Note that this does not prohibit the project from implementing ajax/$http calls.  Just host static json in app/data
 
@@ -15,6 +17,8 @@ Login needs help.  Trying to emulate a basic login sequence.  (A) Styling is off
 Playgound should be broken into individual subprojects instead of sharing a common controller.
 
 The grid/paging http request would ideally be put into a service.
+
+File upload / progress bars.
 
 Wnat to introduce better font/icon capability.
 

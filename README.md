@@ -1,3 +1,4 @@
-# Angular Seed Plus
+g2-ui-demo
+==========
 
-Angular seed with HTML5 Broiler Plate and a few other tweaks.
+G2 UI demo

@@ -5,39 +5,24 @@ html {
     overflow-y: scroll;
 }
 
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-
 
 /******** Grid Global ********/
+
+
+.ngPagerControl .ngPagerButton {
+    /** pagination buttons are pushed down 10px... fix that here... **/
+    margin-top: -10px;
+
+    /** and a little space in between  **/
+    margin-left: 2px;
+    margin-rightt: 2px;
+}
+
+
 .nglabel {
     display: block;
     float: left;
@@ -54,6 +39,12 @@ html {
 }
 /******** Grid ********/
 
+.gridStyle {
+    border: 1px solid rgb(212, 212, 212);
+    width: none !important;
+    height: 420px;
+}
+
 .ngGrid{
     background-color: rgb(253, 253, 253);
     -webkit-touch-callout: none;
@@ -62,6 +53,37 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/** menu **/
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
 }
 
 /******** Header ********/
@@ -82,25 +104,15 @@ html {
 }
 
 /******** Footer ********/
-
 .ngFooterPanel {
-    height: 30px important!;
+    /** height: 30px !important; **/
 }
-
-
-
 
 /*style.css*/
-.gridStyle {
-    border: 1px solid rgb(212, 212, 212);
-    width: none imortant!;
-    height: 420px;
-}
-
 .selectedItems{
     float: left;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
-    display: none !important;
-}
+     display: none !important;
+ }

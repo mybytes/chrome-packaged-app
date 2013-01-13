@@ -1,0 +1,30 @@
+<!--
+Tooltip examples
+-->
+
+
+<!-- EXAMPLE 1: Angular-UI/jQuery passthrough style tooltip -->
+<script>
+    // Note: In a real scenario, any globally used config would best be set during bootstrap (this would live in app.js)
+    myApp.value('ui.config', {
+        // The ui-jq directive namespace
+        jq: {
+            // The Tooltip namespace
+            tooltip: {
+                // Tooltip options. This object will be used as the defaults
+                placement: 'top',
+                extraClass: "fancy",
+                track: true,
+                delay: 0
+            }
+        }
+    });
+</script>
+
+<container>
+    Example 1: Angular-UI/jQuery passthrough style tooltip <br><br>
+    <!-- When using angular's jquery pass-through there is no need to create a directive... just call out the functionality
+     with ui-jq.  So, to perform the equivalent of $("a").tooltip(); ... just do this: -->
+    <a ui-jq="tooltip" href="" class="btn btn-primary btn-large" title="Hint, clicking me will do nothing!" >Hover me for an angular-ui/jquery passthrough tooltip.</a>
+</container>
+<!-- -->

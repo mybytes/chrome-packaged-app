@@ -1,33 +1,14 @@
-<!--
-Tooltip examples
--->
-
-
-<!-- EXAMPLE 1: Angular-UI/jQuery passthrough style tooltip -->
-
-<!-- TODO:  ui.config not being minded... -->
-
-<script>
-    // Note: In a real scenario, any globally used config would best be set during bootstrap (this would live in app.js)
-    myApp.value('ui.config', {
-        // The ui-jq directive namespace
-        jq: {
-            // The Tooltip namespace
-            tooltip: {
-                // Tooltip options. This object will be used as the defaults
-                placement: 'bottom',
-                extraClass: "fancy",
-                track: true,
-                delay: 0
-            }
-        }
-    });
-</script>
-
 <container>
-    Example: Angular-UI/jQuery passthrough style tooltip <br><br>
-    <!-- When using angular's jquery pass-through there is no need to create a directive... just call out the functionality
-     with ui-jq.  So, to perform the equivalent of $("a").tooltip(); ... just do this: -->
-    <a ui-jq="tooltip" href="" class="btn btn-primary btn-large" title="Hint, clicking me will do nothing!" >Hover me for an angular-ui/jquery passthrough tooltip.</a>
+    Example: Angular-UI Bootstrap tooltips.  Hover over anchor tags to explore various styles...<br><br>
+
+    <div class="well">
+        Pellentesque <a><span tooltip="plain vanilla">dafault</span></a>, sit amet venenatis urna cursus eget nunc scelerisque
+        viverra mauris, in aliquam. Tincidunt lobortis feugiat vivamus at <a><span tooltip-placement="left"
+                                                                                   tooltip="On the Left!">placed left</span></a>
+        pharetra convallis posuere morbi leo urna,
+        <a><span tooltip-animation="true" tooltip-placement="bottom" tooltip="I fade in and out and place on bottom!">fading/bottom</span></a> at elementum eu, facilisis sed
+        odio morbi quis commodo odio. In cursus turpis massa tincidunt dui ut.
+
+    </div>
+
 </container>
-<!-- -->

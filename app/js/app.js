@@ -14,6 +14,10 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
     });
+    $routeProvider.when('/home2', {
+        templateUrl: 'partials/home2.html',
+        controller: 'AboutCtrl'
+    });
     $routeProvider.when('/about', {
         templateUrl: 'partials/about.html',
         controller: 'AboutCtrl'
@@ -41,7 +45,7 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
 }]);
 
 // once app is instantiated
-myApp.run(function ($rootScope, $http, AuthService) {
+myApp.run(function ($rootScope, $location, $http, AuthService) {
 
     /** TODO this is a pseudo login... see my troubles with using service in Services.AuthService **/
 
@@ -65,6 +69,17 @@ myApp.run(function ($rootScope, $http, AuthService) {
     $rootScope.logout = function() {
         $rootScope.currentUser = '';
     }
+
+    // good login questions http://stackoverflow.com/questions/11541695/angular-js-redirecting-to-a-certain-route-based-on-condition
+    $rootScope.$watch('currentUser', function () {
+        if ($rootScope.currentUser != '') {
+            // logged in
+            $location.path("/home2");
+        } else {
+            // logged out
+            $location.path( "/" );
+        }
+    }, true);
 
     // setup globals (can easily export to json later for externalization of strings)
     $rootScope.constants = {

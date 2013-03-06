@@ -34,7 +34,7 @@
   - Node Package Manager (npm).  Run "sudo apt-get install npm"
   - recess, jslint, and a host of other packages.  Run "npm install" from the bootstrap directory (That's it, with the latest release Bootstrap simplified things a bit)
 
-# Integrated Technologies - "The Stack"
+# Integrated Technologies - (the stack)
 
 ***
 
@@ -42,9 +42,9 @@
 * angular-ui - The companion suite for AngularJS.
 * Twitter Bootstrap - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
 * angular-strap - Bootstrap directives for Angular.
+* ng-grid - Angular Data Grid.
 * jquery - The Write Less, Do More, JavaScript Library.
 * jquery-ui - The Write Less, Do More, JavaScript Library.
-* ng-grid - Angular Data Grid.
 * modernizr - A JavaScript library that detects HTML5 and CSS3 features in the user’s browser.
 * underscorejs - Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support that you would expect in Prototype.js (or Ruby), but without extending any of the built-in JavaScript objects.
 * prettifyjs - A Javascript module and CSS file that allows syntax highlighting of source code snippets in an html page.

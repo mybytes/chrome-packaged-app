@@ -1,0 +1,119 @@
+<div fade-in>
+    <div class="container">
+        <h3>About Art Cards For Causes...</h3>
+        <hr>
+
+        <div class="row">
+
+            <div class="span7">
+
+                <div class="text-section">
+                    <strong>Our Goals.</strong> Promote fine art & artists while supporting non-profits around the
+                    world.
+                </div>
+
+                <div class="text-section">
+                    <strong>Our Members.</strong> Art Cards for Causes LLC, our Artists, our Benefit Nonprofits, and our
+                    Members work
+                    together to create a mutually beneficial opportunities for business, environmental and financial
+                    sustainability.
+                </div>
+
+                <div class="text-section">
+                    <strong>Art Cards For Causes</strong>
+                    was founded by the Jewett family in 2010. It is a labor of love and commitment, and one that will
+                    continue to grow, change and develop, as the world will demand. Our view of art is that it is as
+                    critical as food and water. Our decision to donate 20% of our proceeds to Non-profits around the
+                    world, reflects our admiration, and appreciation, to all those people who labor out of their love
+                    and commitment for the betterment of our earth, and for all those who depend upon it. The concept
+                    for Art Cards for Causes LLC was inspired by a world in need, its people, its environment, its
+                    plants and animals, its economy. There is a constant plea for help, on every continent; daily
+                    survival, loss of culture, crisis of humanity and environmental disasters, economic depression. Our
+                    own feeling of “how can one, or three, or even 30,000 people make any difference? One drop in the
+                    bucket, one person, one step at a time, together we can, and will, make a difference. Support for
+                    the arts and artists is dwindling. Art programs in schools are a luxury. Art Galleries are becoming
+                    more and more limited and selective, therefore artists have an even more difficult time thriving as
+                    artists. We do not believe art is optional; it is integral to being human, and connected to our
+                    past, present and our future. Art has the ability to transcend a given moment, and give pleasure to
+                    people of all walks of life. It is art that is often the only thing kept by generations for future
+                    generations, it can tell a personal story, a family history, historical events, cultural beliefs, or
+                    document a point in time. Art can restore the human spirit and give life again to something or
+                    someone lost, or in need of inspiration.
+                </div>
+
+                <img class="rounded" ng-src="http://dl.dropbox.com/u/95232851/art/Barn%20Big%2018%207600.jpg">
+
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span4">
+
+                <div class="text-section">
+                    <em>We thank our Artists for sharing their exceptional work with us, and the world. It is with your
+                        participation that we are able to make this special project happen.</em>
+                </div>
+                <img class="rounded" src="http://dl.dropbox.com/u/95232851/art/BarnOwl.jpg">
+
+                <div class="text-section">
+                    <em>We thank our Non-profit members for their commitment to the tasks of their missions, and for
+                        being adaptive to the needs of the environment, financial and human resources.</em>
+                </div>
+                <hr>
+
+                <div class="text-section">
+                    <strong>Tilly, Laugh Master</strong>
+                    Tilly is... not a dog really, she is more of a cartoon, and a genius at comic relief. She reminds us
+                    at numerous moments throughout our day that it is important to take at least 5 minutes to stop and
+                    play... with her of course.
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+
+
+        <div class="row">
+            <div class="span12">
+
+                <div class="text-section">
+                    <h4>We thank you for visiting our site, and thank all those who choose to join us in helping to
+                        Change the
+                        World!</h4>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="span5 text-section">
+                <strong>Wendy Armstrong Jewett - CEO, Director of Art</strong><br>
+                Wendy, primary instigator of AC4C, has been living as an artist and designer her entire life. Her
+                parents, and family, all talented and accomplished artists are her greatest inspiration. Wendy would
+                admit she is genetically coded to design and create art, and darn little else. Her experience has been
+                multifaceted from furniture design and construction, glass casting / etching, stone / steel sculpture,
+                lighting design / fabrication, graphic design, drawing and painting. Wendy has, and continues, to
+                participate on nonprofit boards, for the arts, environment, and her local community.
+            </div>
+
+            <div class="span1 text-section">
+            </div>
+
+            <div class="span5 text-section">
+                <strong>Jessie Jewett - Director of Fundraising & Events</strong><br>
+                Jessie has been organizing fundraisers and events since the age of 6. She has the talent and eye of an
+                artist with the ability to apply it to a whole event. When she found there were no Event Planning
+                degrees at any Washington Universities she worked with a Communications professor at Western Washington
+                University and helped to author and create one. She has worked as a regional Fundraiser/Event Planner
+                for a national organization, volunteered for numerous nonprofits, and runs her own Event Planning
+                business in Seattle. Her ability to create and oversee our AC4C Fundraising program is integral to our
+                goal to be a viable funding source for nonprofits worldwide.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,1 +1,1 @@
-Static mock data for test/development.  Not to be deployed.
+In the interest of keeping this project completely static/client-side, we use this directory to store mock json responses.

@@ -1,0 +1,33 @@
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav">
+
+                <li><a href="#/">&copy; {{constants.company_name}} {{constants.copyright_year}}</a></li>
+                <li class="divider-vertical"></li>
+
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/contact">Contact</a></li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Function Group A <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="#/">Do I</a></li>
+                        <li class=""><a href="#/">Do II</a></li>
+                        <li class=""><a href="#/">Do III</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Function Group B <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="#/">Do I</a></li>
+                        <li class=""><a href="#/">Do II</a></li>
+                        <li class=""><a href="#/">Do III</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+   
+</div>

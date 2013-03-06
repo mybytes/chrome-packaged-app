@@ -1,17 +1,67 @@
-/* app css stylesheet */
+/** TODO this can be cleaned up, LESSified, and minimized **/
 
-/* RJC:  IE always shows vertical scrollbar, plus nav looks wierd when switching */
+/* just commit to showing the scroll on the right.  otherwise looks funny when
+   navbar is resized horizonally when vertical scroll appears */
 html {
     overflow-y: scroll;
 }
 
-body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+/** this allows us to display nothing until angular has applied changes to the dom
+    without this we see what the dom wants to display first, and then get an update
+    within milliseconds once angular is finished. -- it's the "funny flicker effect"
+ **/
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
 }
 
-/******** Grid Global ********/
+/** supports mail/messaging feature **/
+.mailSection:hover {
+    background-color: green;
+    color: white;
+}
 
+.mailSection .unreadMail {
+    color: white;
+}
+
+.mailDropdown, hr {
+    margin: 0px;
+}
+
+.mailText {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mailSection {
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+.mailDropdown {
+    border-bottom-color: rgb(233, 233, 233);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: rgb(51, 51, 51);
+    border-top-style: none;
+    border-top-width: 0px;
+    color: rgb(51, 51, 51);
+
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size: 11px;
+    left: 0px;
+    width: 352px;
+}
+
+/** **
+supports grid feature
+**/
+
+/******** Grid Global ********/
 
 .ngPagerControl .ngPagerButton {
     /** pagination buttons are pushed down 10px... fix that here... **/
@@ -19,9 +69,8 @@ body {
 
     /** and a little space in between  **/
     margin-left: 2px;
-    margin-rightt: 2px;
+    margin-right: 2px;
 }
-
 
 .nglabel {
     display: block;
@@ -29,7 +78,8 @@ body {
     font-weight: bold;
     padding-right: 5px;
 }
-.ngNoSelect{
+
+.ngNoSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -37,15 +87,22 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
+/** better position ngGrid cell contents **/
+.ngCell div {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 /******** Grid ********/
 
 .gridStyle {
     border: 1px solid rgb(212, 212, 212);
-    width: none !important;
+    /* width: none !important; */
     height: 420px;
 }
 
-.ngGrid{
+.ngGrid {
     background-color: rgb(253, 253, 253);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -55,46 +112,15 @@ body {
     user-select: none;
 }
 
-/** menu **/
-
-.menu {
-    list-style: none;
-    border-bottom: 0.1em solid black;
-    margin-bottom: 2em;
-    padding: 0 0 0.5em;
-}
-
-.menu:before {
-    content: "[";
-}
-
-.menu:after {
-    content: "]";
-}
-
-.menu > li {
-    display: inline;
-}
-
-.menu > li:before {
-    content: "|";
-    padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-    content: "";
-    padding: 0;
-}
-
 /******** Header ********/
 
-.ngGroupPanel{
+.ngGroupPanel {
     background-color: rgb(234, 234, 234);
     overflow: hidden;
-    border-bottom: 1px solid rgb(212,212,212);
+    border-bottom: 1px solid rgb(212, 212, 212);
 }
 
-.ngGroupPanelDescription{
+.ngGroupPanelDescription {
     margin-top: 5px;
     margin-left: 5px;
 }
@@ -108,11 +134,5 @@ body {
     /** height: 30px !important; **/
 }
 
-/*style.css*/
-.selectedItems{
-    float: left;
-}
 
-[ng\:cloak], [ng-cloak], .ng-cloak {
-     display: none !important;
- }
+

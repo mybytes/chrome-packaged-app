@@ -1,0 +1,82 @@
+<div fade-in>
+    <div class="container">
+
+        <h3>Contact us...</h3>
+        <hr>
+
+        <div class="row">
+            <div class="span4">
+
+                <p class="text-section">
+                    <strong>Art Cards for Causes LLC</strong><br>
+                    PO Box 1056
+                    Kingston, WA 98346
+                    (855) 582-2242 (AC4C)
+                </p>
+
+                <hr>
+                <p class="text-section">
+                    <strong>Wendy Armstrong Jewett</strong><br>
+                    CEO, Director of Art<br>
+                    art@artcardsforcauses.com<br>
+                    (855) 582-2242 (AC4C)
+                </p>
+
+                <hr>
+                <p class="text-section">
+                    <strong>Jessie Jewett</strong><br>
+                    <small>
+                        Director of Events & Fundraising<br>
+                        events@artcardsforcauses.com<br>
+                        (855) 582-2242 (AC4C)
+                    </small>
+                </p>
+
+            </div>
+
+            <div class="span1"></div>
+
+            <div class="span7">
+                <p class="text-section"><em>
+                    We encourage those interested in particular Artwork, Artists or Nonprofits to contact them through
+                    the contact information provided in the directory listing. Initial correspondence will be through
+                    our secure email form.
+                </em>
+                </p>
+
+                <hr>
+
+                <div class="well text-section" style="text-align: center">
+                    Add Link Buttons to your Website, Facebook, or Twitter!
+                    <div>
+                        <img style="margin: 20px;"
+                             src="http://www.artcardsforcauses.com/admin/artists/upload/AC4C_A_Link_Sq.jpg"/>
+
+                        <img style="margin: 20px;"
+                             src="http://www.artcardsforcauses.com/admin/artists/upload/AC4C_Link_A_Rectangle.jpg"/>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="span12">
+
+                    <br><br>
+
+                    <p text-section>
+                        <small>
+                            * For security and spam protection Art Cards for Causes does not display any Member phone
+                            numbers or email addresses.
+                            Your e-mail message will be sent directly to the email address the Artist has requested for
+                            contact.
+                        </small>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

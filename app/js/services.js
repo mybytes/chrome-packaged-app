@@ -1,32 +1,58 @@
 'use strict';
 
-/* Services */
-
-/** Currently not in use.  I am having trouble with two things:
- 1.  Can't call AuthService from the dom.  So I need to wrap the call in rootScope
- 2.  AuthService doesn't seem to be a singleton.  So, it's useless.
- * **/
-myApp.factory( 'AuthService',
-    function() {
-        var currentUser;
-
-        var authorized = false;
-
+// simple stub that could use a lot of work...
+myApp.factory('RESTService',
+    function ($http) {
         return {
-            login: function(name) {
-                currentUser = name;
-                authorized = true;
-            },
-            logout: function() {
-                currentUser = null;
-                authorized = false;
-            },
-            isLoggedIn: function() {
-                return authorized;
-            },
-            currentUser: function() {
-                return currentUser;
+            get:function (url, callback) {
+                return $http({method:'GET', url:url}).
+                    success(function (data, status, headers, config) {
+                        callback(data);
+                        //console.log(data.json);
+                    }).
+                    error(function (data, status, headers, config) {
+                        console.log("failed to retrieve data");
+                    });
             }
         };
     }
 );
+
+
+// simple auth service that can use a lot of work... 
+myApp.factory('AuthService',
+    function () {
+        var currentUser = null;
+        var authorized = false;
+
+        // initial state says we haven't logged in or out yet...
+        // this tells us we are in public browsing
+        var initialState = true;
+
+        return {
+            initialState:function () {
+                return initialState;
+            },
+            login:function (name, password) {
+                currentUser = name;
+                authorized = true;
+                //console.log("Logged in as " + name);
+                initialState = false;
+            },
+            logout:function () {
+                currentUser = null;
+                authorized = false;
+            },
+            isLoggedIn:function () {
+                return authorized;
+            },
+            currentUser:function () {
+                return currentUser;
+            },
+            authorized:function () {
+                return authorized;
+            }
+        };
+    }
+);
+

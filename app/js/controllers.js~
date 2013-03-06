@@ -1,0 +1,354 @@
+'use strict'
+
+myApp.controller('CardWizardCtrl', ['$scope', '$location', function ($scope, $location) {
+
+    $scope.foo = "";
+
+    $scope.page = "";
+    $scope.step = 0;
+
+    $scope.steps = [
+        {
+            "index":1,
+            "page":"partials/cards/select.html",
+            "title":"Step 1: Select an artwork for card..."
+        },
+        {
+            "index":2,
+            "page":"partials/cards/template.html",
+            "title":"Step 2: Select a template..."
+        },
+        {
+            "index":3,
+            "page":"partials/cards/style.html",
+            "title":"Step 3: Add text and styling..."
+        },
+        {
+            "index":4,
+            "page":"partials/cards/address.html",
+            "title":"Step 4: Address your card..."
+        },
+        {
+            "index":5,
+            "page":"partials/cards/schedule.html",
+            "title":"Step 5: Schedule and send your card..."
+        }
+    ];
+
+    $scope.goto = function (step) {
+
+        $scope.step = step;
+        $scope.title = $scope.steps[step - 1]["title"];
+        $scope.page = $scope.steps[step - 1]["page"];
+    }
+
+    // start at step one, "select an image"
+    $scope.goto(1);
+
+    // set selected image JSON and URL, and redirect to
+    // step two, "create card"
+    $scope.selectImage = function (json, url) {
+        $scope.cardService.setSelectedImage(json, url);
+        //$location.path("cards/create");
+        $scope.goto(2);
+    }
+
+    $scope.full = function () {
+        //console.log("full called.");
+        return $scope.cardService.getFullHTML();
+    }
+
+    // goto step three, "address your card"
+    $scope.finishedCreate = function () {
+        console.log("called finish create.");
+        $scope.goto(4);
+    }
+
+    // this is dirty and hacky... cleanup
+    $scope.styleClass = "";
+
+    // goto step three, "address your card"
+    $scope.finishedSelectTemplate = function (styleClass) {
+        console.log(">>" + styleClass);
+
+        // hacky... set class (should bind entire enclosing template html instead)
+        $scope.styleClass = styleClass;
+
+        $scope.goto(3);
+    }
+
+    $scope.cardHTML = $scope.cardService.getCardHTML();
+
+    $scope.$watch('cardHTML', function () {
+        $scope.cardService.setCardHTML($scope.cardHTML);
+        //console.log("Set card html to " + $scope.cardHTML);
+    }, true);
+
+    $scope.addressList = $scope.cardService.getAddressList();
+
+
+    $scope.datepicker = {dateStrap:'12/12/2012'};
+    $scope.timepicker = {timeStrap:'05:30 PM'};
+
+
+    // modal
+    $scope.open = function () {
+        $scope.shouldBeOpen = true;
+    };
+
+    $scope.close = function () {
+        $scope.closeMsg = 'I was closed at: ' + new Date();
+        $scope.shouldBeOpen = false;
+        $location.path("/home");
+    };
+
+
+}]);
+
+
+// TODO when no controller needed... declare?
+myApp.controller('CausesCtrl', ['$scope', function ($scope) {
+}]);
+
+
+myApp.controller('Gallery1Ctrl', ['$scope', '$rootScope', function ($scope) {
+
+    // use artsmall as the seed art list (artsmall defined on rootscope)
+    $scope.galleryimages = $scope.artsmall;
+
+    $scope.filterOptions = {
+        filterText:"",
+        useExternalFilter:false
+    };
+
+    $scope.gridOptions = {
+        data:'galleryimages',
+        enableCellSelection: true,
+        canSelectRows: true,
+        multiSelect:false,
+        jqueryUITheme:true,
+        displaySelectionCheckbox:false,
+        selectedItems:$scope.mySelections,
+        enablePaging:false,
+        pagingOptions:$scope.pagingOptions,
+        filterOptions:$scope.filterOptions,
+        rowHeight: 100
+    };
+
+    $scope.gridOptions.columnDefs = [
+        {
+            field:'file',
+            displayName:'image',
+            width:165,
+            enableFocusedCellEdit: false,
+            cellTemplate:'<div><img ng-src="{{row.entity[col.field]}}" /></div>'
+        },
+        {
+            field:'title',
+            displayName:'title',
+            width:165,
+            enableFocusedCellEdit: true,
+            cellTemplate:'<div>{{row.entity[col.field]}}</div>'
+        },
+        {
+            field:'artist',
+            displayName:'artist',
+            width:165,
+            enableFocusedCellEdit: true,
+            cellTemplate:'<div>{{row.entity[col.field]}}</div>'
+        },
+        {
+            field:'medium',
+            enableFocusedCellEdit: true,
+            displayName:'medium',
+            width:165,
+            cellTemplate:'<div>{{row.entity[col.field]}}</div>'
+        },
+        {
+            field:'keywords',
+            enableFocusedCellEdit: true,
+            displayName:'keywords',
+            width:165,
+            cellTemplate:'<div>{{row.entity[col.field]}}</div>'
+        },
+
+        {
+            field:'id',
+            enableFocusedCellEdit: false,
+            displayName:'remove',
+            width:165,
+            cellTemplate:'<div><button ng-click="removeFromGallery(row.entity[col.field])">delete</button></div>'
+        }
+
+    ];
+
+    $scope.foo = function() {
+        console.log("foo");
+    }
+
+    $scope.removeFromGallery = function(id) {
+        // TODO has to be a better way to do this
+        console.log(id + " will be removed from the gallery");
+        //delete $scope.galleryimages[id];
+        var indexToDelete = -1;
+        for (var i in $scope.galleryimages) {
+            var j = $scope.galleryimages[i];
+            if (j["id"] === id) {
+                console.log("deleting " + j["title"]);
+                indexToDelete = i;
+                break;
+            }
+        }
+        delete $scope.galleryimages[indexToDelete];
+        //$scope.$apply();
+    }
+
+}]);
+
+
+myApp.controller('Gallery2Ctrl', ['$scope', function ($scope) {
+}]);
+
+myApp.controller('ExampleCtrl', ['$scope', function ($scope) {
+}]);
+
+myApp.controller('MembershipCtrl', ['$scope', function ($scope) {
+}]);
+
+myApp.controller('ArtistsCtrl', ['$scope', function ($scope) {
+}]);
+
+myApp.controller('AboutCtrl', ['$scope', function ($scope) {
+}]);
+
+myApp.controller('ContactCtrl', ['$scope', function ($scope) {
+}]);
+
+myApp.controller('InboxCtrl', ['$scope', function ($scope) {
+
+    // modal
+    $scope.open = function () {
+        $scope.shouldBeOpen = true;
+    };
+
+    $scope.close = function () {
+        $scope.closeMsg = 'I was closed at: ' + new Date();
+        $scope.shouldBeOpen = false;
+    };
+    // end modal
+
+    $scope.recentMail = [
+        { type:'unread', from:'James Dugan', msg:'Got your card.  Thank you for the holiday wishes!  Best.' },
+        { type:'unread', from:'Ralph Lori', msg:'Thanks for the seasons greetings.  We need to catch up soon.' },
+        { type:'read', from:'Patti Klein', msg:'Happy holidays!' },
+        { type:'read', from:'Frank Renton', msg:'I updated the rotary club contact list.  Let\'s send out that newsletter!' }
+    ];
+
+    $scope.closeMail = function (index) {
+        //console.log("closing mail " + index);
+        $scope.recentMail.splice(index, 1);
+    };
+
+}]);
+
+myApp.controller('CarouselCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
+
+    var a = $scope.artfull;
+    //console.log("Art: " + a);
+
+    $scope.showA = false; // bound to ng-show a
+    $scope.contentA = ""; // bound to ng-src a
+    $scope.showB = false; // bound to ng-show b
+    $scope.contentB = ""; // bound to ng-src b
+
+    $scope.initial = true; // is initial load
+
+    $scope.contentIndex = 0; // index into content list
+
+    $scope.transitionDuration = 1000; // how long to transition
+
+    $scope.displayContentFor = 4000; // how long to display content
+
+    // increments or resets index, returns next content
+    var nextContent = function () {
+
+        if ($scope.contentIndex > a.length - 2) {
+            $scope.contentIndex = 0;
+        } else {
+            $scope.contentIndex++;
+        }
+        return a[$scope.contentIndex]['file'];
+    }
+
+    // transition to next content
+    $scope.update = function () {
+
+        // if first image, transition in A and stage B
+        if ($scope.initial) {
+            $scope.contentA = nextContent();
+            //console.log("Showing - " + $scope.contentA);
+            $scope.showA = true;
+            $scope.contentB = nextContent();
+            //console.log("Staging - " + $scope.contentB);
+
+            $scope.initial = false;
+            mytimeout = $timeout($scope.update, $scope.displayContentFor);
+        } else {
+            // otherwise, toggle/stage next
+            $scope.transition(nextContent());
+        }
+    }
+
+    // flip visibility and set next content on invisible element,
+    // then update
+    $scope.transition = function (next) {
+
+        // if showing A, show B and reload A
+        if ($scope.showA) {
+            //console.log("Showing - " + $scope.contentB);
+            //console.log("Staging - " + next);
+
+            // show B
+            $scope.showA = false;
+            $scope.showB = true;
+            // re-stage A
+            $scope.contentA = next;
+        } else {
+            //console.log("Showing - " + $scope.contentA);
+            //console.log("Staging - " + next);
+
+            // show A
+            $scope.showB = false;
+            $scope.showA = true;
+            // re-stage B
+            $scope.contentB = next;
+        }
+        mytimeout = $timeout($scope.update, $scope.displayContentFor);
+    }
+
+    // start timeout immediately
+    var mytimeout = $timeout($scope.update, 0);
+
+    $scope.stop = function () {
+        $timeout.cancel(mytimeout);
+    }
+
+}]);
+
+myApp.controller('HomeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
+
+    $scope.ready = false;
+
+    $scope.makeReady = function () {
+        $scope.ready = true;
+    }
+
+    // start timeout immediately
+    var mytimeout = $timeout($scope.makeReady, 500);
+
+    $scope.stop = function () {
+        $timeout.cancel(mytimeout);
+    }
+
+
+}]);

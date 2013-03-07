@@ -6,7 +6,7 @@
 
 ***
 
-* Serve as a more substantial starting point for enterprise and commercial web applications
+* Serve as a more feature-rich starting point for enterprise and commercial web applications
 * Remain static, as in no web server _processing_ required
   - The only need for a web server is to host the contents of the app folder
 * Integrate best-of-breed JavaScript MVC, styling, ui, and tooling components "the Angular way"
@@ -55,17 +55,5 @@
 
 ***
 
-Please submit all pull requests against *-wip branches.  If it includes LESS changes, please compile the less to app/css and include the compiled css in your changes.
-
-## Wish list...
-
-TODO - Move these to project issues...
-
-* Tests.  We have a test story based on the original angular-seed, but haven't touched them since.  We need the tests fleshed out to represent the current state of the application.
-* CSS - Cleanup app.css and move it into the Bootstrap/LESS dir.  Since the LESS will then become Bootstrap + Application specific code, may want to reorganize the project a bit.  IE rename the root to LESS with subfolders for Bootstrap and Custom (or App).  Should compile to min.css.
-* Extend the authorization service
-* File upload widget with working controller integration.  This will be a challenge to do maintaining the goal of no server-side requirements.  Perhaps mockup as much as possible.
-* Some focus on responsiveness.  Responsiveness is for the most part looking pretty good, but could always use a little help.
-* Consider using grunt
-* Additional/better service and filter examples.
-* Include all angular-strap and angular-ui widgets (playground contains roughly 70% today)
+* Please submit all pull requests against *-wip branches.  If it includes LESS changes, please compile the less to app/css and include the compiled css in your changes.
+* Issues are tracked in github issues.

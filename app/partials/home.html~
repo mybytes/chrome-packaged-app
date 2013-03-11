@@ -1,3 +1,0 @@
-
-this is the home...
-<div ng-include="'https://raw.github.com/robertjchristian/angular-enterprise-seed/master/README.md'"></div>

@@ -57,4 +57,4 @@
 
 * Please submit all pull requests against *-wip branches.  If it includes LESS changes, please compile the less to app/css and include the compiled css in your changes.
 * Issues are tracked in github issues.
-
+* NOTE:  All changes to master are automatically updated to gh-pages (http://robertjchristian.github.com/angular-enterprise-seed/#/) within 24 hours.

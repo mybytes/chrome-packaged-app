@@ -3,7 +3,6 @@
 # Angular Enterprise Seed
 ## An AngularJS seed for serious web apps
 
-***
 
 # Goals
 

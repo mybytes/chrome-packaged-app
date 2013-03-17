@@ -1,6 +1,7 @@
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/robertjchristian/angular-enterprise-seed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-# Angular Enterprise Seed - An AngularJS seed for serious web apps
+# Angular Enterprise Seed
+## An AngularJS seed for serious web apps
 
 ***
 

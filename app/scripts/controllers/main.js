@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chromePackagedAppApp')
+angular.module('myBytesApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

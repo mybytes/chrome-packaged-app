@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chromePackagedAppApp', ['ngGrid'])
+angular.module('myBytesApp', ['ngGrid', 'myBytesServices'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

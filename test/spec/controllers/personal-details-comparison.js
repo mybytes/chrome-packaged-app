@@ -3,7 +3,7 @@
 describe('Controller: PersonalDetailsComparisonCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('chromePackagedAppApp'));
+  beforeEach(module('myBytesApp'));
 
   var PersonalDetailsComparisonCtrl,
     scope;

@@ -2,30 +2,25 @@
 
 angular.module('myBytesApp')
   .controller('PersonalDetailsComparisonCtrl', function ($scope, SparqlService) {
-	  	var extractColumnDefs = function(results) {
-				return _.map(results["head"]["vars"], function(column) { 
-					return { field: column, displayName: column }; 
-				});
-			}
 
-			var extractResultValues = function(results) {
-				return _.map(results["results"]["bindings"], function(result) { 
-					var values = {};
-					_.each(_.keys(result), function(property) {
-						values[property] = result[property]["value"];
+			$scope.rows = SparqlService.getPersonalDetails(function (results) {
+				/* convert the results into the format:
+				
+					$scope.rows = [ { header: "fullName",  rowClass: "danger", values: ["Marty Bytes", "Marty Bytes", ...] },
+													{ header: "firstName", rowClass: "",       values: ["Marty", "Marty", ...] },  
+													...
+												]
+				*/
+				$scope.rows = _.map(results["head"]["vars"], function(head) { 
+					var values = _.map(results["results"]["bindings"], function(item) {
+						return _.has(item, head) ? item[head].value : "";
 					});
-					return values;
+					return { 
+						header: head, 
+						rowClass: _.unique(values).length > 1 ? "danger": "",
+						values: values
+						}; 
 				});
-			}
-			
-	  	$scope.gridData = SparqlService.getPersonalDetails(function (results) {
-	  		$scope.columnDefs = extractColumnDefs(results);
-	  		$scope.gridData = extractResultValues(results);
-	  	});
-
-			$scope.gridOptions = { 
-				data: 'gridData',
-				columnDefs: 'columnDefs'
-			};
+			});
 
   });

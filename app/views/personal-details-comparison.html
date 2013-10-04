@@ -1,2 +1,11 @@
 <h1>Personal details</h1>
-<div class="gridStyle" ng-grid="gridOptions"></div>
+
+<p>The table below compares your personal details stored by various sites.  Red shows where the data is different</p>
+
+<table class="table table-striped">
+	<tr ng-repeat="row in rows" class="{{row.rowClass}}">
+		<th>{{row.header}}</th>
+		<td ng-repeat="value in row.values">{{value}}</td>
+	</tr>
+</table>
+

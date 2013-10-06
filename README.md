@@ -16,3 +16,11 @@ myBytes Chrome Packaged App
 
 * Run dev server:
   * `grunt server`
+
+OR 
+
+* Run as Chrome Packaged App
+  * Browse to `chrome://extensions/`
+  * Enabled "Developer mode"
+  * Load unpackaged extension - select `app/` folder (the one containing `manifest.json`)
+
